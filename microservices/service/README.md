@@ -22,3 +22,14 @@ go run main.go --run_client
 ```
 
 And that's all there is to it.
+
+Test using the following
+
+ curl http://localhost:8000/people
+[{"id":"1","firstname":"John","lastname":"Doe","address":{"city":"City X","state":"State X"}},{"id":"2","firstname":"Koko","lastname":"Doe","address":{"city":"City Z","state":"State Y"}}]
+$ curl http://localhost:8000/people?1
+[{"id":"1","firstname":"John","lastname":"Doe","address":{"city":"City X","state":"State X"}},{"id":"2","firstname":"Koko","lastname":"Doe","address":{"city":"City Z","state":"State Y"}}]
+$ curl http://localhost:8000/people?2
+[{"id":"1","firstname":"John","lastname":"Doe","address":{"city":"City X","state":"State X"}},{"id":"2","firstname":"Koko","lastname":"Doe","address":{"city":"City Z","state":"State Y"}}]
+$ 
+
