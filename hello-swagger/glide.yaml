@@ -1,0 +1,4 @@
+package: github.com/arunpa0206/gotrainingv1/swagger
+import:
+- package: github.com/alexflint/go-arg
+  version: ^1.0.0
