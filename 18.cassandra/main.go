@@ -14,7 +14,7 @@ func main() {
 	session, _ := cluster.CreateSession()
 	defer session.Close()
 	// insert a user
-	if err := session.Query("INSERT INTO users (lastname, age, city, email, firstname) VALUES ('Jones', 35, 'Austin', 'bob@example.com', 'Bob')").Exec(); err != nil {
+	if err := session.Query("INSERT INTO users (lastname, age, city, email, firstname) VALUES ('Jones', 34, 'Austin', 'bob@example.com', 'Bob')").Exec(); err != nil {
 		log.Fatal(err)
 	}
 	// Use select to get the user we just entered

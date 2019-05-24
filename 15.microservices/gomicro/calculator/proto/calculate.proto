@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service Calculate {
+	rpc Multiply(CalculateRequest) returns (CalculateResponse) {}
+}
+
+message CalculateRequest {
+	int32 A=1;
+  int32 B=2;
+}
+
+message CalculateResponse {
+	int32 result = 3;
+}
