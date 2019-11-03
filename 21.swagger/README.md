@@ -1,7 +1,6 @@
 To check the Swagger UI run the following
 
- swagger serve https://raw.githubusercontent.com/swagger-api/swagger-spec/master/examples/v2.0/json/petstore-expanded.json
-
+https://code.tutsplus.com/tutorials/lets-go-object-oriented-programming-in-golang--cms-26540
 
 For  Gp Swagger installation and use cases refere to
 

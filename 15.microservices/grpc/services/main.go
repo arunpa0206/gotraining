@@ -6,7 +6,7 @@ import (
 	"net"
 	"sync"
 
-	pb "github.com/arunpa0206/gotrainingv1/microservices/grpc/proto"
+	pb "github.com/arunpa0206/gotrainingv1/15.microservices/grpc/proto"
 	"google.golang.org/grpc"
 )
 

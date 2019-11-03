@@ -9,7 +9,6 @@ func main() {
 	//We’ll use an unsigned integer to represent our (always-positive) counter.
 	var ops uint64
 	//To simulate concurrent updates, we’ll start 50 goroutines that each increment the counter about once a millisecond.
-	for i := 0; i < 50; i++ {
 		go func() {
 			for {
 				//To atomically increment the counter we use AddUint64, giving it the memory address of our ops counter with the & syntax.

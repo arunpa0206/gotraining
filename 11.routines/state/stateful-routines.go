@@ -70,8 +70,7 @@ func main() {
 	}
 	//Let the goroutines work for a second.
 	time.Sleep(time.Second)
-	//Finally, capture and report the op counts.
-	readOpsFinal := atomic.LoadUint64(&readOps)
+ 	readOpsFinal := atomic.LoadUint64(&readOps)
 	fmt.Println("readOps:", readOpsFinal)
 	writeOpsFinal := atomic.LoadUint64(&writeOps)
 	fmt.Println("writeOps:", writeOpsFinal)
