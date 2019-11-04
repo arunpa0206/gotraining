@@ -42,7 +42,7 @@ Step10a: aws lambda get-function-configuration --function-name books
 
 Step 10b: Integrate Lambda funtion
 
-aws apigateway put-integration --rest-api-id rest-api-id --resource-id resource-id --http-method ANY --type AWS_PROXY --integration-http-method POST --uri arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:account-id:function:books/invocations
+aws apigateway put-integration --rest-api-id rest-api-id --resource-id resource-id --http-method ANY --type AWS_PROXY --integration-http-method POST --uri arn:aws:apigateway:us-east-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-2:account-id:function:books/invocations
 
 step 11a get user arn
 aws sts get-caller-identity
