@@ -15,7 +15,7 @@ func worker(done chan bool) {
 func main() {
 	//Start a worker goroutine, giving it the channel to notify on.
 	done := make(chan bool, 1)
-	go worker()
+	go worker(done)
 	//Block until we receive a notification from the worker on the channel.
 	<-done
 }
