@@ -3,3 +3,7 @@
 
  Install protoc --
  go get -u github.com/golang/protobuf/protoc-gen-go
+
+ To compile proto file 
+
+ protoc --go_out=plugins=grpc:. hello.proto 
