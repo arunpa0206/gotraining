@@ -24,4 +24,8 @@ https://kubernetes.io/docs/tasks/tools/install-minikube/
 
 https://docs.docker.com/docker-for-windows/install/
 
+7.Set environment
 
+		export GOPATH=~/go
+  		export GOBIN=$GOPATH/bin
+		export PATH=$PATH:$GOPATH:$GOBIN

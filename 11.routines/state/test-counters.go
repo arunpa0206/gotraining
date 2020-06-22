@@ -17,7 +17,7 @@ func main() {
 				time.Sleep(time.Millisecond)
 			}
 		}()
-	}
+	
 	//Wait a second to allow some ops to accumulate.
 	time.Sleep(time.Second)
 	//In order to safely use the counter while it’s still being updated by other goroutines, we extract a copy of the current value into opsFinal via LoadUint64. As above we need to give this function the memory address &ops from which to fetch the value.
