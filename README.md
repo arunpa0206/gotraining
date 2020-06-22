@@ -29,3 +29,6 @@ https://docs.docker.com/docker-for-windows/install/
 		export GOPATH=~/go
   		export GOBIN=$GOPATH/bin
 		export PATH=$PATH:$GOPATH:$GOBIN
+8.Install redis
+
+https://medium.com/@petehouston/install-and-config-redis-on-mac-os-x-via-homebrew-eb8df9a4f298
