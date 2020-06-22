@@ -6,7 +6,7 @@ import (
 	"log"
 	"net"
 
-	pb "github.com/arunpa0206/gotrainingv1/15.microservices/grpc/helloworld/proto"
+	pb "github.com/arunpa0206/gotraining/15.microservices/grpc/helloworld/proto"
 	"google.golang.org/grpc"
 )
 
