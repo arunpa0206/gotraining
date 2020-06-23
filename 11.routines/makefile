@@ -3,6 +3,7 @@ run:
 		go run channels/test-channel-direction.go
 		go run channels/test-channel-buffer.go
 		go run routines/test-routines.go
+		go run routines/data_race.go
 		go run select/test-select.go
 		go run select/test-ticker.go
 		go run select/test-timeout.go

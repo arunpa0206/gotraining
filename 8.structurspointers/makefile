@@ -2,3 +2,4 @@ run:
 		go run testinterfaces.go
 		go run testmethods.go
 		go run teststructs.go
+		go run any_struct.go

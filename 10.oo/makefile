@@ -1,3 +1,3 @@
 run:
-		go run encapsulate.go
+		go run encapsulation.go
 		go run poly.go
