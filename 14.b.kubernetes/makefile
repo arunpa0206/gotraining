@@ -4,9 +4,12 @@ docker-clean:
 
 #build the docker image using the docker file in the current directory
 #create a docker container locally and expose it on the port 8080
+
 docker-build:
+		#docker build -target image name .
 		docker build -t go-app-img .
 docker-run:
+		#docker run -detach -port targetport:application port --name container name image name
 		docker run -d -p 8030:7000 --name go-app-container  go-app-img
 #this is required if we are deploying on gks
 
@@ -21,6 +24,7 @@ test-docker:
 docker-push:
 		docker login
 		docker build -t golangrest/go-app .
+		#docker push repository name/image name:tag name
 		docker push golangrest/go-app:latest
 #install and start minikube
 minikube-install:
@@ -34,8 +38,11 @@ minikube-start:
 
 minikube-clean:
 		#delete all the pods and deployments in the kubernetes cluster
+		#pods our docker container
 		kubectl delete --all pods --namespace=default
+		#service enables neywork access to a set of pods
 		kubectl delete --all svc --namespace=default
+		#deployments is responsible for keeping a set of pods running
 		kubectl delete --all deployments --namespace=default
 		#gcloud container clusters delete test1
 
@@ -47,15 +54,16 @@ minikube-clean:
 minikube-deploy:
 		#make build push
 		kubectl create -f deployment.yaml
-		#kubectl get deployments
+		#expose the deployment of my-go-app on nodeport with numer 3000
 		kubectl expose deployment my-go-app --type=NodePort --name=go-app-svc --port=3000
+		#get the pods for portforwarding
 		kubectl get pods
 		#kubectl get service my-go-app
 
-
+#copy the pods name by using kubectl get pods and replace it for portforwarding
 minikube-portforward:
-		kubectl port-forward my-go-app-7d7cf64f76-qbnp8 7000:7000
-
+		kubectl port-forward my-go-app-7d7cf64f76-bmmcj 7000:7000
+#
 minikube-test:
 
 		curl localhost:7000/people/1

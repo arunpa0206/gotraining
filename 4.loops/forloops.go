@@ -25,4 +25,8 @@ func main() {
 		}
 		fmt.Println(n)
 	}
+	for n :=0; n<=5;{
+		fmt.Println(n)
+		n++
+	}
 }

@@ -7,7 +7,7 @@ import (
 	"context"
 
 	"github.com/micro/cli"
-	proto "github.com/micro/examples/service/proto"
+	proto "github.com/arunpa0206/gotraining/15.microservices/gomicro/greeter/proto"
 	micro "github.com/micro/go-micro"
 )
 
