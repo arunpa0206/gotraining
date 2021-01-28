@@ -11,3 +11,4 @@ get:
 		go get github.com/streadway/amqp
 		go mod init
 		go get github.com/go-redis/redis/v7
+		go get gopkg.in/check.v1
