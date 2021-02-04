@@ -84,7 +84,7 @@ prepare:
 		
 		make minikube-start
 		make namespace=default minikube-clean
-		make docker-test
+		make docker-clean-test
 		make repo=golangrest image-name=go-app tag=latest docker-push
 		make app-name=my-go-app svc=go-app-svc minikube-deploy
 
