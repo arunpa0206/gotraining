@@ -15,14 +15,13 @@ get:
 
 
 
-install-golang-windows:
-		choco install golang
 
-install-golang-mac:
-		brew install golang
+
+
+	
 
 install-windows:
-		make install-golang-windows
+		
 		cd  14.b.kubernetes && make install-windows
 		cd 15.microservices && make install-windows
 		cd 17.db && make install-windows
@@ -30,7 +29,7 @@ install-windows:
 		make get
  
  install-mac:
-		make install-golang-mac
+		
 		cd  14.b.kubernetes && make install-mac
 		cd 15.microservices && make install-mac
 		cd 17.db && make install-mac

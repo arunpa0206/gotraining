@@ -1,6 +1,7 @@
 Installion in windows
 
 step 1. install chocolatey using the following command:
+     open windows powershell with admin access
      Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
 
@@ -10,9 +11,11 @@ step 2. install make using the following command:
 
 step 3. install-git using following command:
 choco install git
+Restart the terminal 
 
-step 4. Run the following make target
-        make install-windows
+Step 4 . Install golang using the following command:
+        choco install golang
+
 
 step 5. setup workspace 
         echo %GOPATH%
@@ -23,7 +26,9 @@ step 5. setup workspace
         cd github.com
         mkdir $git repo (replace with your git repo name)
         cd $repo
-        git clone https://github.com/arunpa0206/gotraining.git
+
+step 6. Run the following make target
+        make install-windows
 
 Installion in MAC
 
