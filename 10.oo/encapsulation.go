@@ -2,14 +2,14 @@ package main
 
 import "fmt"
 
-type Encapsulation struct{
+type Encapsulation struct {
 }
 
-func(e *Encapsulation) Expose() {
+func (e *Encapsulation) Expose() {
 	fmt.Println("i am  exposed")
 }
 
-func(e *Encapsulation) hide() {
+func (e *Encapsulation) hide() {
 	fmt.Println("this is a super secret")
 
 }
@@ -20,15 +20,10 @@ func (e *Encapsulation) Unhide() {
 }
 
 func main() {
-    e := Encapsulation{}
+	e := Encapsulation{}
 
-    e.Expose()     // "AHHHH! I'm exposed!"
+	e.Expose() // "AHHHH! I'm exposed!"
 
-    // e.hide()    // if uncommented, causes the following error
-                   // ./main.go:10: e.hide undefined (cannot refer
-                   // to unexported field or method encapsulation.
-                   // (*Encapsulation)."".hide)
-
-    e.Unhide()     // "Shhhh... this is super secret"
-                   // "...jk"
+	e.Unhide() // "Shhhh... this is super secret"
+	// "...jk"
 }
