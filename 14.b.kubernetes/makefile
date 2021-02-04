@@ -68,9 +68,14 @@ minikube-stop:
 	minikube stop
 
 
-docker-test:
+docker-clean-test:
 	
 		make container-name=go-app-container docker-clean
+		make image-name=go-app docker-build
+		make container-name=go-app-container image-name=go-app docker-run
+		make url=localhost:8030/people/1 test-docker
+
+docker-test:
 		make image-name=go-app docker-build
 		make container-name=go-app-container image-name=go-app docker-run
 		make url=localhost:8030/people/1 test-docker
