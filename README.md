@@ -30,6 +30,12 @@ step 5. setup workspace
 step 6. Run the following make target
         make install-windows
 
+step 7. Test your environment
+        make test
+
+step 8 get the libriraries
+        make get
+
 Installion in MAC
 
 step 1. Install homebrew uisng following command:
@@ -64,3 +70,9 @@ step 5. setup workspace
         mkdir $git repo (replace with your git repo name)
         cd $repo
         git clone https://github.com/arunpa0206/gotraining.git
+
+step 7. test your environment:
+        make test
+
+step 8 get the libriraries
+        make get
