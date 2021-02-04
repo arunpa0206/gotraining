@@ -23,19 +23,19 @@ func main() {
 
 	q, err := ch.QueueDeclare(
 		"hello", // name
-		false,   // durable
+		false,   // durable - survive after restart
 		false,   // delete when unused
-		false,   // exclusive
-		false,   // no-wait
-		nil,     // arguments
+		false,   // exclusive - private queue
+		false,   // no-wait - no acknowledement to client
+		nil,     // arguments - option queue length, limiter ot TTL
 	)
 	failOnError(err, "Failed to declare a queue")
 
 	body := "Hello World!"
 	err = ch.Publish(
-		"",     // exchange
+		"",     // exchange - fan out, direct
 		q.Name, // routing key
-		false,  // mandatory
+		false,  // mandatory - publish tp alternate exchan
 		false,  // immediate
 		amqp.Publishing{
 			ContentType: "text/plain",

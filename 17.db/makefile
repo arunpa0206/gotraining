@@ -10,3 +10,12 @@ mysql:
 run:
 		go run db-dial.go
 		go run db-insert.go
+
+install-windows:
+		choco install mysql
+		mysql -u root -p
+
+install-mac:
+		brew install mysql
+		mysql -u root -p
+		

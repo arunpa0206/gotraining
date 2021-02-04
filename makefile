@@ -12,3 +12,35 @@ get:
 		go mod init
 		go get github.com/go-redis/redis/v7
 		go get gopkg.in/check.v1
+
+
+
+install-golang-windows:
+		choco install golang
+
+install-golang-mac:
+		brew install golang
+
+install-windows:
+		make install-golang-windows
+		cd  14.b.kubernetes && make install-windows
+		cd 15.microservices && make install-windows
+		cd 17.db && make install-windows
+		cd 24.messaging && make install-windows
+		make get
+ 
+ install-mac:
+		make install-golang-mac
+		cd  14.b.kubernetes && make install-mac
+		cd 15.microservices && make install-mac
+		cd 17.db && make install-mac
+		cd 24.messaging && make install-mac
+		make get
+
+test:
+		protoc --vesrion
+		make --vesrion
+		rabbitmqctl --version
+		docker --version
+		minikube --version
+		mysql --version

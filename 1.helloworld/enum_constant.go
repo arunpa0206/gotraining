@@ -3,7 +3,8 @@
 import "fmt"
 
 const (
-	b = iota
+	a = iota
+	b
 	c
 )
 const (
@@ -12,7 +13,7 @@ const (
 
 func main() {
 
-	//fmt.Printf("%v\n", a)
+	fmt.Printf("%v\n", a)
 	fmt.Printf("%v\n", b)
 	fmt.Printf("%v\n", c)
 	fmt.Printf("%v\n", a2)

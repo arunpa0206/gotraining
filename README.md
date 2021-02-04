@@ -1,67 +1,61 @@
+Installion in windows
+
+step 1. install chocolatey using the following command:
+     Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
 
-# gotraining
+step 2. install make using the following command:
+    choco install make
+    make --version
 
-1. Installation Guide 
-https://golang.org/doc/install 
+step 3. install-git using following command:
+choco install git
 
-2. Set Up  Workspace
+step 4. Run the following make target
+        make install-windows
 
-https://www.callicoder.com/golang-installation-setup-gopath-workspace/ 
+step 5. setup workspace 
+        echo %GOPATH%
+        cd  %GOPATH%
+        mkdir bin pkg src
+        cd src
+        mkdir github.com
+        cd github.com
+        mkdir $git repo (replace with your git repo name)
+        cd $repo
+        git clone https://github.com/arunpa0206/gotraining.git
 
-3.Install mysql
+Installion in MAC
 
-https://gist.github.com/nrollr/3f57fc15ded7dddddcc4e82fe137b58e
+step 1. Install homebrew uisng following command:
+         ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-4. Signup for newrelic free account on the new relic website and have a login
+step 2. Install make using following command
+        brew install make
+        make --version
 
-5.Install minikube
+step 3. Install git using following command
+        brew install git
+        git --version
 
-https://kubernetes.io/docs/tasks/tools/install-minikube/
+step 4. Run the following make target
+        make install-mac
 
-6.Install docker desktop:
+step 5. setup workspace
+        code ~/.bash_profile
 
-https://docs.docker.com/docker-for-windows/install/
+5.1 Add the following to this file:
+        export GOPATH=$workdirectory/go (replace workdirectory with path )
+        export GOBIN=$GOPATH/bin
+        export PATH=$PATH:$GOPATH:$GOBIN
+        export PATH=$PATH:/usr/local/sbin
 
-7.Set environment
-
-		export GOPATH=~/go
-  		export GOBIN=$GOPATH/bin
-		export PATH=$PATH:$GOPATH:$GOBIN
-
-8.Install redis -mac
-https://medium.com/@petehouston/install-and-config-redis-on-mac-os-x-via-homebrew-eb8df9a4f298  
-
-Installing redis on windows:
-https://redislabs.com/ebook/appendix-a/a-3-installing-on-windows/a-3-2-installing-redis-on-window/ 
-
-stalling RabbitMQ: MAC
-                brew update
-                brew install rabbitmq
-                export PATH=$PATH:/usr/local/sbin
-                brew services start rabbitmq
-                rabbitmqctl status
-
-Installing rabbitMQ: windows
-            Download Erlang : https://www.erlang.org/downloads 
-            Download Rabbitmq: https://www.rabbitmq.com/install-windows.html#downloads 
-
-Installing kafka on windows:
-https://dzone.com/articles/running-apache-kafka-on-windows-os 
-        
-Installing Kafka on mac:
-        brew cask install java
-        brew install kafka
-        zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties
-        kafka-server-start /usr/local/etc/kafka/server.properties
-9.Install make for mac:
-brew install make
-
-install make for windows:
-https://stackoverflow.com/questions/32127524/how-to-install-and-use-make-in-windows - windows
-
-Install Protobuf:
- brew install protobuf -  MAC
- https://github.com/protocolbuffers/protobuf/releases - windows
- 
- 
+5.2 Cretae the recommended directories
+        cd $GOPATH
+        mkdir bin pkg src
+        cd src
+        mkdir github.com
+        cd github.com
+        mkdir $git repo (replace with your git repo name)
+        cd $repo
+        git clone https://github.com/arunpa0206/gotraining.git
