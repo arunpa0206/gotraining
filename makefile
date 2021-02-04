@@ -37,9 +37,9 @@ install-windows:
 		make get
 
 test:
-		protoc --vesrion
-		make --vesrion
+		protoc --version
+		make --version
 		rabbitmqctl --version
 		docker --version
-		minikube --version
+		minikube version
 		mysql --version
