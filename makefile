@@ -14,12 +14,6 @@ get:
 		go get gopkg.in/check.v1
 
 
-
-
-
-
-	
-
 install-windows:
 		choco install vscode		
 		cd  14.b.kubernetes && make install-windows
