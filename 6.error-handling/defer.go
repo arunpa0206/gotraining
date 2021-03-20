@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 // Functions
-func add1(a1, a2 int) int {
+func add(a1, a2 int) int {
 	res := a1 + a2
 	fmt.Println("Result: ", res)
 	return res

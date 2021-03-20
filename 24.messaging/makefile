@@ -1,5 +1,5 @@
 rabbitmq:
-		go run rabbitmq/send.go
+		go run rabbitmq/send.go	
 		go run rabbitmq/receive.go
 		
 redis-send:
@@ -14,14 +14,14 @@ install-windows:
 		
 
 install-mac:
-				brew update
-                brew install rabbitmq
-                export PATH=$PATH:/usr/local/sbin
-                brew services start rabbitmq
-                rabbitmqctl status
-				brew install redis
-            	brew services start redis
-            	redis-cli ping
+		brew update
+		brew install rabbitmq
+		export PATH=$PATH:/usr/local/sbin
+		brew services start rabbitmq
+		rabbitmqctl status
+		brew install redis
+		brew services start redis
+		redis-cli ping
 
 
 

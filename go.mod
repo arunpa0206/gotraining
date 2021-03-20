@@ -8,6 +8,7 @@ require (
 	github.com/gocql/gocql v0.0.0-20210129204804-4364a4b9cfdd // indirect
 	github.com/golang/protobuf v1.4.3
 	github.com/gorilla/mux v1.8.0
+	github.com/micro/go-micro v1.18.0
 	github.com/newrelic/go-agent v3.10.0+incompatible // indirect
 	github.com/streadway/amqp v1.0.0
 	golang.org/x/net v0.0.0-20210119194325-5f4716e94777

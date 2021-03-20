@@ -26,6 +26,7 @@ step 5. setup workspace
         cd github.com
         mkdir $git repo (replace with your git repo name)
         cd $repo
+        git clone https://github.com/arunpa0206/gotraining.git
 
 step 6. Run the following make target
         make install-windows
