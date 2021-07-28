@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+option go_package = "github.com/arunpa0206/gotraining/15.microservices/grpc/helloworld/proto";
+
 package helloworld;
 
 // The greeting service definition.
