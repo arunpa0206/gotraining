@@ -77,3 +77,24 @@ step 7. test your environment:
 
 step 8 get the libriraries
         make get
+       
+Installation in Linux
+
+Step 1 :- Install GO
+                sudo wget https://golang.org/dl/go1.15.5.linux-amd64.tar.gz
+                sudo tar -C /usr/local -xzf go1.15.5.linux-amd64.tar.gz
+                export PATH=$PATH:/usr/local/go/bin
+                source ~/.bashrc
+                go version
+        
+        Make a project Folder
+        And run the command to initialise GO
+                go mod init (module_name)
+        
+        Write .go files and run with:
+                        go run (file_name).go
+
+Step 2 :- Install protobuf
+                sudo apt update
+                sudo apt install snapd
+                sudo snap install protobuf --classic
